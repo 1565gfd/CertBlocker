@@ -183,6 +183,10 @@ namespace CertBlocker
             btnRefresh.Click += (s, e) => { UpdateBlocked(); SetStatus("Список обновлён.", false); };
             Controls.Add(btnRefresh);
 
+            var btnExport = new Button { Text = "Экспорт выбранного (.cer)", Location = new Point(442, 50), Size = new Size(200, 30) };
+            btnExport.Click += (s, e) => ExportSelectedFound();
+            Controls.Add(btnExport);
+
             var lblSearch = new Label { Text = "Поиск установленных:", Location = new Point(12, 92), Size = new Size(150, 20) };
             Controls.Add(lblSearch);
 
@@ -345,6 +349,26 @@ namespace CertBlocker
                     catch (Exception ex) { SetStatus("Ошибка чтения файла: " + ex.Message, true); }
                     finally { if (pub != null) pub.Dispose(); }
                 }
+            }
+        }
+
+        private void ExportSelectedFound()
+        {
+            if (lstFound.SelectedItems.Count == 0) { SetStatus("Сначала выберите сертификат в верхнем списке.", true); return; }
+            var cert = (X509Certificate2)lstFound.SelectedItems[0].Tag;
+            using (var dlg = new SaveFileDialog())
+            {
+                dlg.Filter = "Сертификат (*.cer)|*.cer";
+                var nm = CertOps.DisplayName(cert);
+                foreach (var ch in System.IO.Path.GetInvalidFileNameChars()) nm = nm.Replace(ch, '_');
+                dlg.FileName = (nm.Length > 60 ? nm.Substring(0, 60) : nm) + ".cer";
+                if (dlg.ShowDialog() != DialogResult.OK) return;
+                try
+                {
+                    System.IO.File.WriteAllBytes(dlg.FileName, cert.Export(X509ContentType.Cert));
+                    SetStatus("Сохранено: " + dlg.FileName, false);
+                }
+                catch (Exception ex) { SetStatus("Ошибка экспорта: " + ex.Message, true); }
             }
         }
 
