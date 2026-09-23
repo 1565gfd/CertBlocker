@@ -14,8 +14,9 @@
 </p>
 
 <p align="center">
-  🔗 Нужна блокировка <b>без прав администратора</b> (для текущего пользователя, без UAC)? —
-  <a href="https://github.com/1565gfd/CertBlocker-NoAdmin">1565gfd/CertBlocker-NoAdmin</a>
+  <b>✅ Готова версия без прав администратора</b> — запускается без UAC, блокирует
+  сертификат для текущего пользователя:<br>
+  👉 <a href="https://github.com/1565gfd/CertBlocker-NoAdmin"><b>1565gfd/CertBlocker-NoAdmin</b></a>
 </p>
 
 ---
@@ -88,10 +89,10 @@ Firefox использует **собственное** хранилище и н
 Get-FileHash -Algorithm SHA256 .\CertBlocker.exe
 ```
 
-Ожидаемое значение для `CertBlocker.exe` из релиза **v1.0.1**:
+Ожидаемое значение для `CertBlocker.exe` из релиза **v1.0.2**:
 
 ```
-BE52D5B18CF8E344040B67ECECE4ED27F0B99F4DBF373691B018303B2A72DB8C
+385383476ED14A9678049B5F539DFF7A9EB47FA7BB13CE901DEADC67C71C6E8B
 ```
 
 Если хеши совпадают — файл ровно тот, что опубликован здесь. Хотите полностью
