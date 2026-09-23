@@ -13,6 +13,11 @@
   <img src="https://img.shields.io/badge/license-MIT-2ECC71" alt="License: MIT">
 </p>
 
+<p align="center">
+  🔗 Нужна блокировка <b>без прав администратора</b> (для текущего пользователя, без UAC)? —
+  <a href="https://github.com/1565gfd/CertBlocker-NoAdmin">1565gfd/CertBlocker-NoAdmin</a>
+</p>
+
 ---
 
 ## 📖 Что это
