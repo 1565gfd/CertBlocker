@@ -60,10 +60,11 @@ SHA-256 релиза **v1.0.3**:
 
 `certmgr.msc` → «Сертификаты, к которым нет доверия» → удалить запись.
 
-## Версия без прав администратора
+## Версии
 
-[CertBlocker-NoAdmin](https://github.com/1565gfd/CertBlocker-NoAdmin) — блокировка
-для текущего пользователя, без UAC.
+- [CertBlocker](https://github.com/1565gfd/CertBlocker) — для всей системы, требуются права администратора.
+- [CertBlocker-NoAdmin](https://github.com/1565gfd/CertBlocker-NoAdmin) — для текущего пользователя, без прав администратора.
+- [CertBlocker-Lite](https://github.com/1565gfd/CertBlocker-Lite) — минимальная версия без прав администратора.
 
 ## Лицензия
 
