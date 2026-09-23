@@ -10,6 +10,7 @@
   <img src="https://img.shields.io/badge/platform-Windows%207–11-0078D6?logo=windows&logoColor=white" alt="Platform">
   <img src="https://img.shields.io/badge/C%23-.NET%20Framework%204.x-512BD4?logo=csharp&logoColor=white" alt="C#">
   <img src="https://img.shields.io/badge/UI-WinForms-6C3483" alt="WinForms">
+  <img src="https://img.shields.io/badge/admin-required%20⚠️-E67E22" alt="Admin required">
   <img src="https://img.shields.io/badge/license-MIT-2ECC71" alt="License: MIT">
 </p>
 
